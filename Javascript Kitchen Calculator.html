@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Kitchencalculator.css">
+    <script src="kitchencalculator.js"></script>
+
+</head>
+
+<body>
+    <form>
+        Kitchen calculator
+        <br></br>
+        <div id="box">
+            <div id="column1">
+                <label for="Product type">1. Select your Product type:</label><br></br>
+                <label for="Product type">2. Select your Product line:</label><br></br>
+                <br></br>
+                <label for="linearfootageLabel">3. Enter the linear footage</label><br></br>
+                <label for="cornerUnitsLabel" id="cornerUnitsLabel">4. If cabinets, how many corner units?</label><br></br>
+
+            </div>
+            <div id="column2">
+                <select id="Select1" name="D1" onchange="return Select1_onclick()">
+                    <option>--Select Your Product--</option>
+                    <option>Base Cabinets</option>
+                    <option>Wall Cabinets</option>
+                    <option>Counter Tops</option>
+                </select><br></br>
+                <input type="radio" id="Empire Standard" name="Product line" value="Empire Standard" onclick="empireStandardClicked();">
+                <label for="Empire Standard">Empire Standard</label><br>
+                <input type="radio" id="Kitchen Elite" name="Product line" value="Kitchen Elite" onclick="KitchenEliteClicked();">
+                <label for="Kitchen Elite">Kitchen Elite</label><br>
+                <input type="radio" id="Gold Star Plus" name="Product line" value="Gold Star Plus" onclick="GoldStarPlusClicked();">
+                <label for="Gold Star Plus">Gold Star Plus</label><br></br>
+                <input type="text" id="linearFootage" name="txtCheckText1"></input><br></br>
+                <input type="text" id="cornerUnits" name="txtCheckText1"></input>
+            </div>
+            <div id="column4">
+             <img id="image">
+
+            </div>
+        </div>
+        
+
+        <div id="productColumn">
+            <label for="Product type">Click the <button type="button" onclick="getTotalPrice();">Calculate</button>
+                button </label>
+        </div>
+        <div id="box">
+            <div id="column3">
+                <label for="Product type">5. And see the results: </label>
+                <input type="text" id="results" name="txtCheckText1"></input>
+            </div>
+
+    </form>
+</body>
+
+</html>
